@@ -1,4 +1,7 @@
 function processData(data) {
+    if (!data || !data.value) {
+        return "";
+    }
     return data.value.toUpperCase();
 }
 
