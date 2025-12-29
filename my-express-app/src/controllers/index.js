@@ -8,4 +8,4 @@ class IndexController {
     }
 }
 
-export default IndexController;
+module.exports = IndexController;

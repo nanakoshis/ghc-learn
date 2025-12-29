@@ -1,12 +1,14 @@
 const express = require('express');
-const { setRoutes } = require('./routes/index');
-const { setupMiddleware } = require('./middleware/index');
+const setRoutes = require('./routes/index');
+const middleware = require('./middleware/index');
+
+// src/app.js
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 // ミドルウェアの設定
-setupMiddleware(app);
+app.use(express.json());
 
 // ルートの設定
 setRoutes(app);

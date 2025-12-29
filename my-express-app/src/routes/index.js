@@ -3,10 +3,9 @@ const IndexController = require('../controllers/index');
 
 const setRoutes = (app) => {
     const router = express.Router();
-    const indexController = new IndexController();
 
-    router.get('/', indexController.home);
-    router.get('/about', indexController.about);
+    router.get('/', IndexController.home);
+    router.get('/about', IndexController.about);
 
     app.use('/', router);
 };
