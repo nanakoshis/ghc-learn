@@ -7,7 +7,9 @@ const setRoutes = (app) => {
     router.get('/', IndexController.home);
     router.get('/about', IndexController.about);
 
+    // ルートの設定
     app.use('/', router);
+    app.use('/about', router);
 };
 
 module.exports = setRoutes;
